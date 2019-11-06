@@ -50,14 +50,13 @@
     let titleText;
 
     if (path) {
-      const parts = path.split('/');
-      path = parts[parts.length - 1];
+        path = path.replace(/\//g, ' ');
       titleText = titleize(path).replace(/-|_/g, ' ');
     } else {
       titleText = window.location.host;
     }
 
-    titleText = `Index of ${titleText}`;
+    titleText = `${titleText}`;
 
     const container = document.createElement('div');
     container.id = 'page-header';
