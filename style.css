@@ -50,3 +50,8 @@ img {
   max-width: 100%;
   text-align: left;
 }
+
+
+#readme > div {
+  padding-bottom: 20px;
+}
