@@ -48,7 +48,7 @@ const hasReadme =
 if (hasReadme) {
   const populateReadme = async () => {
     const readmeContent = await fetch(
-      window.location.pathname + "/" + README_FILENAME
+     window.location.protocol + '//' + window.location.host + '/' +  window.location.pathname.replace(/\/$/, '') + "/" + README_FILENAME
     );
 
     const body = await readmeContent.text();
