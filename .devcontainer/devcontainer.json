@@ -1,0 +1,17 @@
+{
+  "name": "Fancy Index",
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "application",
+  "workspaceFolder": "/usr/local/apache2/htdocs/fancy-index",
+  "settings": {
+    "terminal.integrated.defaultProfile.linux": "/bin/bash"
+  },
+  "extensions": [
+    "mrmlnc.vscode-apache",
+    "esbenp.prettier-vscode"
+  ],
+  "forwardPorts": [
+    8080
+  ],
+  "remoteUser": "vscode"
+}

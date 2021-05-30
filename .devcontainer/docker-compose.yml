@@ -1,0 +1,21 @@
+version: "3.7"
+
+services:
+  application:
+    container_name: fancy-index
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ..:/usr/local/apache2/htdocs/fancy-index:cached
+      - ./root.htaccess:/usr/local/apache2/htdocs/.htaccess:ro
+      - ./httpd.conf:/usr/local/apache2/conf/httpd.conf:ro
+      - ~/.ssh:/home/vscode/.ssh:ro
+
+    ports:
+      - 8080:80
+
+    # command: httpd-foreground
+    
+    # Overrides default command so things don't shut down after the process ends.
+    command: httpd-foreground

@@ -11,8 +11,7 @@ AddEncoding gzip svgz
 </Files>
 
 # DIRECTORY CUSTOMIZATION
-<IfModule mod_autoindex.c>
-
+<IfModule mod_autoindex>
   # SET INDEX OPTIONS
   IndexOptions IgnoreCase FancyIndexing HTMLTable SuppressHTMLPreamble FoldersFirst VersionSort NameWidth=* DescriptionWidth=* XHTML IconHeight=16 IconWidth=16
 
